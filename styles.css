@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fdfffc;
+}
+
+#header-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url('images/header-image.jpg');
+  width: 720px;
+  height: 343px;
+  margin: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+h1 {
+  color: white;
+  background-color: #1d3557;
+  width: auto;
+  height: 34px;
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 20px;
+  padding: 3px 12px 5px 12px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.header-msg {
+  color: white;
+  background-color: #457b9d;
+  width: 412px;
+  height: 52px;
+  font-size: 18px;
+  margin-top: 11px;
+  padding: 5px 28px 8px 28px;
+  border-radius: 6px;
+  text-align: center;
+}
+#main {
+  display: flex;
+  flex-direction: column;
+  width: 720px;
+  height: 378px;
+  margin: 0 auto;
+  background-color: #f1faee;
+  text-align: center;
+}
+
+.sceneries {
+  display: flex;
+  justify-content: space-around;
+  height: 250px;
+}
+.sites {
+  //border: 2px solid #457b9d;
+  height: 100%;
+  width: 198px;
+  margin-top: 24px;
+  margin-bottom: 14px;
+}
+
+h2 {
+  margin-top: 39px;
+}
+.sites-img {
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+#scene-one {
+  background: url('images/Lake Balaton.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#scene-two {
+  background: url('images/Synagogue.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#scene-three {
+  background: url('images/Tihany cave.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+h4 {
+  font-size: 16px;
+  font-weight: 400px;
+  margin-bottom: 4px;
+  color: #1d3557;
+}
+p {
+  font-size: 16px;
+  line-height: auto;
+  color: #1d3557;
+}
+#guide {
+  display: flex;
+  align-items: center;
+  width: 720px;
+  height: 394px;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+.guide-details {
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  width: 400px;
+  height: 294px;
+  padding: 0 20px;
+  border-radius: 5px;
+  background-color: #a8dadc;
+}
+#guide-img {
+  display: flex;
+  background: url('images/guide.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  width: 180px;
+  margin-top: 23px;
+  margin-bottom: 23px;
+  border-radius: 5px;
+}
+.descript {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  width: 180px;
+}
+.descript p {
+  font-size: 14px;
+}
+.descript h4 {
+  margin-bottom: 20px;
+}
+#myname {
+  font-weight: bold;
+  color: #1d3557;
+  font-size: 16px;
+  margin-top: 20px;
+}
+#footer {
+  width: 720px;
+  height: 300px;
+  margin: auto;
+  text-align: center;
+  margin-top: 30px;
+}
+#footer h4 {
+  font-size: 20px;
+  color: #1d3557;
+  margin-bottom: 18px;
+  margin-left: 20px;
+}
+#footer input,
+label {
+  margin-left: 20px;
+  margin-bottom: 18px;
+  font-size: 20px;
+}
+#footer input {
+  width: 180px;
+  margin-left: 3px;
+  border: 2px solid #1d3557;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 2px;
+}
+
+#subscription-btn {
+  background-color: red;
+  width: 400px;
+  height: 40px;
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: bold;
+  margin: 10px 20px;
+  border: none;
+  border-radius: 5px;
+}
+#subscription-btn:hover {
+  background-color: #e63946;
+  cursor: pointer;
+}
