@@ -6,13 +6,20 @@ body {
   font-family: 'Poppins', sans-serif;
   background-color: #fdfffc;
 }
+#header-section,
+#main,
+#guide,
+#footer {
+  width: 100%;
+  max-width: 720px; /* Only expands to 720px on larger screens */
+}
 
 #header-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   background: url('images/header-image.jpg');
-  width: 720px;
+  //width: 720px;
   height: 343px;
   margin: auto;
   background-size: cover;
@@ -34,8 +41,8 @@ h1 {
 .header-msg {
   color: white;
   background-color: #457b9d;
-  width: 412px;
-  height: 52px;
+  width: 70%;
+  height: auto;
   font-size: 18px;
   margin-top: 11px;
   padding: 5px 28px 8px 28px;
@@ -45,8 +52,8 @@ h1 {
 #main {
   display: flex;
   flex-direction: column;
-  width: 720px;
-  height: 378px;
+  //width: 720px;
+  //height: 378px;
   margin: 0 auto;
   background-color: #f1faee;
   text-align: center;
@@ -55,7 +62,9 @@ h1 {
 .sceneries {
   display: flex;
   justify-content: space-around;
-  height: 250px;
+  height: 100%;
+  flex-wrap: wrap; /* Allow items to stack on mobile */
+  gap: 1rem;
 }
 .sites {
   //border: 2px solid #457b9d;
@@ -73,6 +82,10 @@ h2 {
   border-radius: 50%;
   height: 100px;
   width: 100px;
+  @media (min-width: 768px) {
+    width: 100px;
+    height: 100px;
+  }
 }
 #scene-one {
   background: url('images/Lake Balaton.jpg');
@@ -103,7 +116,7 @@ p {
 #guide {
   display: flex;
   align-items: center;
-  width: 720px;
+  //width: 720px;
   height: 394px;
   margin: 0 auto;
   background-color: #ffffff;
@@ -150,8 +163,8 @@ p {
   margin-top: 20px;
 }
 #footer {
-  width: 720px;
-  height: 300px;
+  //width: 720px;
+  //height: 300px;
   margin: auto;
   text-align: center;
   margin-top: 30px;
