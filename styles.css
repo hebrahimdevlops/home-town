@@ -5,6 +5,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #fdfffc;
+  height: 100%;
 }
 #header-section,
 #main,
@@ -12,6 +13,8 @@ body {
 #footer {
   width: 100%;
   max-width: 720px; /* Only expands to 720px on larger screens */
+  height: auto;
+  min-height: 50vh;
 }
 
 #header-section {
@@ -20,7 +23,9 @@ body {
   align-items: center;
   background: url('images/header-image.jpg');
   //width: 720px;
-  height: 343px;
+  //height: auto;
+  aspect-ratio: 16/9; /* Maintain proportions */
+  background-size: contain;
   margin: auto;
   background-size: cover;
   background-repeat: no-repeat;
@@ -117,7 +122,7 @@ p {
   display: flex;
   align-items: center;
   //width: 720px;
-  height: 394px;
+  //height: 394px;
   margin: 0 auto;
   background-color: #ffffff;
 }
@@ -126,7 +131,7 @@ p {
   justify-content: space-around;
   margin: auto;
   width: 400px;
-  height: 294px;
+  height: auto;
   padding: 0 20px;
   border-radius: 5px;
   background-color: #a8dadc;
@@ -164,16 +169,27 @@ p {
 }
 #footer {
   //width: 720px;
-  //height: 300px;
+  //height: auto;
   margin: auto;
   text-align: center;
   margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Horizontally centers child elements */
+  justify-content: center;
+}
+#footer input,
+#footer label {
+  margin-left: 0; /* Remove left margin forcing misalignment */
+  display: block; /* Stack label + input vertically */
+  width: 100%;
 }
 #footer h4 {
   font-size: 20px;
   color: #1d3557;
   margin-bottom: 18px;
   margin-left: 20px;
+  text-align: center;
 }
 #footer input,
 label {
@@ -188,16 +204,20 @@ label {
   text-align: center;
   font-size: 14px;
   border-radius: 2px;
+  margin: 0 auto 18px; /* Center with auto margins */
 }
 
 #subscription-btn {
   background-color: red;
-  width: 400px;
+  width: 90%; /* Instead of 400px */
+  max-width: 400px; /* Limits expansion on large screens */
+  margin: 10px auto; /* Center horizontally */
+  //width: 400px;
   height: 40px;
   font-size: 20px;
   color: #ffffff;
   font-weight: bold;
-  margin: 10px 20px;
+  //margin: 10px 20px;
   border: none;
   border-radius: 5px;
 }
