@@ -1,11 +1,13 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
-body {
+html body {
   font-family: 'Poppins', sans-serif;
   background-color: #fdfffc;
   height: 100%;
+  overflow-x: hidden;
 }
 #header-section,
 #main,
@@ -22,34 +24,40 @@ body {
   flex-direction: column;
   align-items: center;
   background: url('images/header-image.jpg');
-  //width: 720px;
-  //height: auto;
   aspect-ratio: 16/9; /* Maintain proportions */
-  background-size: contain;
   margin: auto;
   background-size: cover;
   background-repeat: no-repeat;
+  justify-content: center; /* Center vertically if needed */
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 3rem 1rem; /* Provides spacing inside */
+  width: 100%;
 }
 h1 {
   color: white;
-  background-color: #1d3557;
-  width: auto;
+  background-color: rgba(29, 53, 87, 0.91);
   height: 34px;
-  font-size: 24px;
   font-weight: 600;
   margin-top: 20px;
   padding: 3px 12px 5px 12px;
   border-radius: 6px;
   text-align: center;
+  width: fit-content; /* keeps it tight around text*/
+  max-width: 90vw; /* ensures it doesn’t overflow*/
+  font-size: clamp(1.5rem, 4vw, 1.2rem); /* responsive, but with limits*/
+  line-height: 1.3;
+  word-wrap: break-word;
 }
 
 .header-msg {
   color: white;
-  background-color: #457b9d;
+  background-color: rgba(69, 123, 157, 0.9);
   width: 70%;
   height: auto;
   font-size: 18px;
   margin-top: 11px;
+  margin-bottom: 1.8rem;
   padding: 5px 28px 8px 28px;
   border-radius: 6px;
   text-align: center;
@@ -57,11 +65,10 @@ h1 {
 #main {
   display: flex;
   flex-direction: column;
-  //width: 720px;
-  //height: 378px;
   margin: 0 auto;
   background-color: #f1faee;
   text-align: center;
+  margin-top: 2rem;
 }
 
 .sceneries {
@@ -72,7 +79,6 @@ h1 {
   gap: 1rem;
 }
 .sites {
-  //border: 2px solid #457b9d;
   height: 100%;
   width: 198px;
   margin-top: 24px;
@@ -87,25 +93,29 @@ h2 {
   border-radius: 50%;
   height: 100px;
   width: 100px;
-  @media (min-width: 768px) {
-    width: 100px;
-    height: 100px;
-  }
+}
+
+@media (min-width: 768px) {
+  width: 100px;
+  height: 100px;
 }
 #scene-one {
   background: url('images/Lake Balaton.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  margin-top: 0.5rem;
 }
 #scene-two {
   background: url('images/Synagogue.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  margin-top: 0.5rem;
 }
 #scene-three {
   background: url('images/Tihany cave.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  margin-top: 0.5rem;
 }
 h4 {
   font-size: 16px;
@@ -121,18 +131,20 @@ p {
 #guide {
   display: flex;
   align-items: center;
-  //width: 720px;
-  //height: 394px;
   margin: 0 auto;
+  width: 100%;
+  overflow-x: hidden;
+  padding: 0 1rem;
   background-color: #ffffff;
 }
 .guide-details {
   display: flex;
   justify-content: space-around;
   margin: auto;
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   height: auto;
-  padding: 0 20px;
+  padding: 0 1rem;
   border-radius: 5px;
   background-color: #a8dadc;
 }
@@ -143,10 +155,12 @@ p {
   background-repeat: no-repeat;
   background-position: center;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-  width: 180px;
-  margin-top: 23px;
-  margin-bottom: 23px;
   border-radius: 5px;
+  width: 100%;
+  max-width: 120px; /* controls how big it gets on large screens */
+  aspect-ratio: 1 / 1;
+  border-radius: 5px;
+  margin: 1rem auto;
 }
 .descript {
   display: flex;
@@ -167,9 +181,27 @@ p {
   font-size: 16px;
   margin-top: 20px;
 }
+@media (max-width: 600px) {
+  .guide-details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #guide-img {
+    max-width: 70%; /* Allow it to scale more on small screens */
+    width: 100%;
+  }
+
+  .descript {
+    width: 100%;
+    text-align: center;
+  }
+  h1 {
+    font-size: 16px;
+  }
+}
+
 #footer {
-  //width: 720px;
-  //height: auto;
   margin: auto;
   text-align: center;
   margin-top: 30px;
@@ -180,7 +212,7 @@ p {
 }
 #footer input,
 #footer label {
-  margin-left: 0; /* Remove left margin forcing misalignment */
+  /*margin-left: 0; */
   display: block; /* Stack label + input vertically */
   width: 100%;
 }
@@ -188,12 +220,11 @@ p {
   font-size: 20px;
   color: #1d3557;
   margin-bottom: 18px;
-  margin-left: 20px;
+  width: 100%;
   text-align: center;
 }
 #footer input,
 label {
-  margin-left: 20px;
   margin-bottom: 18px;
   font-size: 20px;
 }
@@ -209,15 +240,13 @@ label {
 
 #subscription-btn {
   background-color: red;
-  width: 90%; /* Instead of 400px */
+  width: 90%;
   max-width: 400px; /* Limits expansion on large screens */
   margin: 10px auto; /* Center horizontally */
-  //width: 400px;
   height: 40px;
   font-size: 20px;
   color: #ffffff;
   font-weight: bold;
-  //margin: 10px 20px;
   border: none;
   border-radius: 5px;
 }
